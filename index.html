@@ -8,19 +8,70 @@
     
     .container {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 20vh 1fr 20vh;
+        height: 90vh
     }
+    .cell1 {
+        display: grid;
+        background-color: blue;
+        grid-column: 1/5;
+        justify-content: center;
+    }
+    .cell2 {
+        display: grid;
+        background-color: blueviolet;
+        border: 1px black solid;
+        justify-content: center;
+        grid-column: 1/3;
+    }
+    .cell3 {
+        display: grid;
+        background-color: chartreuse;
+        justify-content: center;
+        grid-column: 3/5;
+    }
+    .cell4 {
+        display: grid;
+        background-color: crimson;
+        grid-column: 1/5;
+        border: solid black 1px;
+    }
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        justify-content: center;
+
+    }
+    .section1,
+    .section2,
+    .section3,
+    .section4 {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+    }
+    .
     </style>
     <title>Document</title>
 </head>
 <body>
-    <div class="container"><header>
-        [Шапка]
+    <div class="container">
+        <header class="cell1">
+        [Шапка страницы]
     </header>
-    <main>[Основной контент]</main>
-    <aside>[Боковая часть]</aside>
-    <footer></footer>
+    <main class="cell2">[Основная часть]</main>
+    <aside class="cell3">[Боковая область]</aside>
+    <footer class="cell4">
+        
+        <div class="footer">
+        <section class="section1">[Секция футера 1]</section>
+        <section class="section2">[Секция футера 2]</section>
+        <section class="section3">[Секция футера 3]</section>
+        <section class="section4">[Секция футера 4]</section>
+</div>
+    </footer>
     </div>
 </body>
 </html>

@@ -4,75 +4,96 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-    
-    .container {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: 20vh 1fr 20vh;
-        height: 90vh
-    }
-    .cell1 {
-        display: grid;
-        background-color: blue;
-        grid-column: 1/5;
-        justify-content: center;
-    }
-    .cell2 {
-        display: grid;
-        background-color: blueviolet;
-        border: 1px black solid;
-        justify-content: center;
-        grid-column: 1/3;
-    }
-    .cell3 {
-        display: grid;
-        background-color: chartreuse;
-        justify-content: center;
-        grid-column: 3/5;
-        ;
-    }
-    .cell4 {
-        display: grid;
-        background-color: crimson;
-        grid-column: 1/5;
-        border: solid black 1px;
-    }
-    .footer {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        justify-content: center;
-
-    }
-    .section1,
-    .section2,
-    .section3,
-    .section4 {
-        display: grid;
-        justify-content: center;
-        align-content: center;
-
-    }
-    .
-    </style>
     <title>Document</title>
+    <style>
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: repeat (7,1fr);
+    grid-template-areas: "header header header header "
+    "menu menu aside1 aside1"
+    "main main sidebar sidebar"
+    "main2 main2 aside2 aside2";
+}
+.header {
+    display: grid;
+    grid-area: header;
+    justify-content: center;
+    padding: 10px;
+}
+.menu {
+    display: grid;
+    grid-area: menu;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    padding: 20px;
+    align-content: start;
+    justify-content: start;
+}
+.main {
+    display: grid;
+    grid-area: main;
+    justify-content: center;
+}
+.p {
+    width: 250px;
+}
+.main2 {
+    display: grid;
+    grid-area: main2;
+    padding: 30px;
+}
+.aside1 {
+    grid-area: aside1;
+}
+.sidebar {
+    display: grid;
+    grid-area: sidebar;
+    justify-content: center;
+}
+.aside2 {
+    grid-area: aside2;
+}
+
+.button {
+    width: 100px;
+    background-color: blue;
+    border-radius: 30px;
+    color: white;
+}
+    </style>
+
+
 </head>
 <body>
     <div class="container">
-        <header class="cell1">
-        [Шапка страницы]
+    <header class="header">
+        <h1>Roadmap</h1>
     </header>
-    <main class="cell2">[Основная часть]</main>
-    <aside class="cell3">[Боковая область]</aside>
-    <footer class="cell4">
-        
-        <div class="footer">
-        <section class="section1">[Секция футера 1]</section>
-        <section class="section2">[Секция футера 2]</section>
-        <section class="section3">[Секция футера 3]</section>
-        <section class="section4">[Секция футера 4]</section>
-</div>
-    </footer>
+
+    <nav class="menu">
+        <section>How it works</section>
+        <section>Blog</section>
+        <section>Support</section>
+    </nav>
+    <aside class="aside1"></aside>
+
+    <main class="main">
+        <h2>Create your first decentralized wallet</h2>
+        <p class="p">The easiest way to manage your multiple cryptocurrency assets</p>
+        <button class="button">Create wallet</button>
+    </main>
+    <aside class="sidebar">
+        <img src="assets/asset 1ives..svg" alt="wallet"></aside>
+    <main class="main2">
+        <p>Dappy is light wallet powered by Blockstack. It uses Gaia decentralized storage and encryption option. Dappy doesn't store or proceed user private key, the all data are securely stored in the Gaia. Dappy was created by the BC Net that trust in crypto and decentralized applications.</p>
+    </main>
+    <aside class="aside2">
+        Multi-currencies
+    </aside>
+    
+    
     </div>
+    
 </body>
 </html>

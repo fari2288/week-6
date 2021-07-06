@@ -1,7 +1,7 @@
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: repeat (7,1fr);
+    grid-template-rows: repeat(7,1fr);
     grid-template-areas: "header header header header "
     "menu menu aside1 aside1"
     "main main sidebar sidebar"
